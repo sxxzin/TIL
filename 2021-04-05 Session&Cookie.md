@@ -19,10 +19,14 @@
     * 관리할수있는데이터의종류,크기제약,보안상취약
 * 쿠키생성
     * javax.servlet.http.Cookie를 사용
-    ``` Cookie c = new Cookie(“popup”,”no”);
-        response.addCookie(c); //응답시 쿠키가 전송된다.```
+    ``` 
+    Cookie c = new Cookie(“popup”,”no”);
+    response.addCookie(c); //응답시 쿠키가 전송된다.
+    ``` 
 * 클라이언트가 보내온 쿠키정보 조회
-    ``` Cookie [] cc = request.getCookies(); //보내온 쿠키가 없으면 빈 배열 리턴 ```
+    ``` 
+    Cookie [] cc = request.getCookies(); //보내온 쿠키가 없으면 빈 배열 리턴 
+    ```
 * 주요메소드
     * String getName(
     * String getValue()
@@ -37,9 +41,13 @@
 * 단점
     * 서버에부담
 * 생성방법
-    ``` HttpSession session = request.getSession();```
+    ```
+     HttpSession session = request.getSession();
+     ```
     * 기존 세션이 있으면 기존 세션객체를, 없으면 새로 생성해서 return 
-    ``` HttpSession session = request.getSession(false);```
+    ```
+     HttpSession session = request.getSession(false);
+     ```
     * 기존 세션이 있으면 기존 세션객체를, 없으면 null 리턴
 * HttpSession의 주요메소드
     * setAttribute(String name, Object value) 
